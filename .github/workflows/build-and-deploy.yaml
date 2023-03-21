@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUCKET: www.esmelealem.com
-      DIST: build
+      DIST: ./
       REGION: us-east-1
       DIST_ID: E1AE44E6CJ86JT
 
@@ -24,18 +24,18 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.REGION }}
     
-    - name: Set up Node.js environment
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+    # - name: Set up Node.js environment
+    #   uses: actions/setup-node@v2
+    #   with:
+    #     node-version: '14'
 
-    - name: Install Dependencies
-      run: |
-        node --version
-        npm install
+    # - name: Install Dependencies
+    #   run: |
+    #     node --version
+    #     npm install
 
-    - name: Build Static Website
-      run: npm run build
+    # - name: Build Static Website
+    #   # run: npm run build
 
     - name: Copy files to the production website with the AWS CLI
       run: |
