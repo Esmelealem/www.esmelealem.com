@@ -1,7 +1,12 @@
  
 {
-    "name": "my-awesome-package",
+   "name": "my-awesome-package",
     "version": "1.0.0",
-    "build": "My App build"
+    "build": "My App build",
+  
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
   }
+}
+  
   
