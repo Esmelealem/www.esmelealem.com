@@ -44,5 +44,5 @@ jobs:
     - name: Copy files to the production website with the AWS CLI
       run: |
         aws cloudfront create-invalidation \
-          --distribution-id ${{ env. }} \
+          --distribution-id ${{ env.DIST_ID }} \
           --paths "/*"
