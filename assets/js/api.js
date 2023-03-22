@@ -10,7 +10,7 @@ function generateId(length) {
 const submitBtn = document.querySelector("#submit");
 
 submitBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+  // e.preventDefault();
 
   const name = document.querySelector("#name").value;
   const email = document.querySelector("#email").value;
@@ -36,39 +36,40 @@ submitBtn.addEventListener("click", (e) => {
     });
 });
 
-// new
-const form = document.querySelector("#contact-form");
-const nameInput = document.querySelector("#name");
-const emailInput = document.querySelector("#email");
-const subjectInput = document.querySelector("#subject");
-const messageInput = document.querySelector("#message");
+// // new
+// const form = document.querySelector("#contact-form");
+// const nameInput = document.querySelector("#name");
+// const emailInput = document.querySelector("#email");
+// const subjectInput = document.querySelector("#subject");
+// const messageInput = document.querySelector("#message");
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  let isValid = true;
+// form.addEventListener("submit", async (event) => {
+//   // event.preventDefault();
+//   console.log("sadf");
+//   let isValid = true;
 
-  nameErrorDiv.textContent = "";
-  emailErrorDiv.textContent = "";
-  subjectErrorDiv.textContent = "";
-  messageErrorDiv.textContent = "";
-  formErrorDiv.textContent = "";
+//   nameErrorDiv.textContent = "";
+//   emailErrorDiv.textContent = "";
+//   subjectErrorDiv.textContent = "";
+//   messageErrorDiv.textContent = "";
+//   formErrorDiv.textContent = "";
 
-  if (!nameInput.value) {
-    nameErrorDiv.textContent = "Please enter your name";
-    isValid = false;
-  }
+//   if (!nameInput.value) {
+//     nameErrorDiv.textContent = "Please enter your name";
+//     isValid = false;
+//   }
 
-  if (!emailInput.value) {
-    emailErrorDiv.textContent = "Please enter your email";
-    isValid = false;
-  } else if (!emailInput.checkValidity()) {
-    emailErrorDiv.textContent = "Please enter a valid email address";
-    isValid = false;
-  }
+//   if (!emailInput.value) {
+//     emailErrorDiv.textContent = "Please enter your email";
+//     isValid = false;
+//   } else if (!emailInput.checkValidity()) {
+//     emailErrorDiv.textContent = "Please enter a valid email address";
+//     isValid = false;
+//   }
 
-  if (!subjectInput.value) {
-    subjectErrorDiv.textContent = "Please enter a subject";
-    i;
-    sValid = false;
-  }
-});
+//   if (!subjectInput.value) {
+//     subjectErrorDiv.textContent = "Please enter a subject";
+//     i;
+//     sValid = false;
+//   }
+// });
